@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Frisørsalong — case-studie · Iversen Web</title>
+  <meta
+    name="description"
+    content="Designkonsept for en frisørsalong med online booking, prisliste og bildegalleri. Et eget konsept laget av Iversen Web."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 font-family=%22Inter,Arial%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>I</text></svg>"
+  />
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="../index.html#hero" class="logo" aria-label="Iversen Web – forside">
+        <span class="logo-mark" aria-hidden="true">I</span>
+        <span class="logo-text">Iversen<span class="logo-accent">Web</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Hovedmeny">
+        <ul class="nav-list">
+          <li><a href="../index.html#services">Tjenester</a></li>
+          <li><a href="../index.html#portfolio">Prosjekter</a></li>
+          <li><a href="../index.html#why">Slik jobber jeg</a></li>
+          <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary btn-sm nav-cta">Ta kontakt</a>
+      </nav>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Åpne meny"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Topbar -->
+    <div class="case-topbar">
+      <div class="container">
+        <a href="../index.html#portfolio" class="case-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Tilbake til prosjekter
+        </a>
+      </div>
+    </div>
+
+    <!-- Case hero -->
+    <section class="case-hero reveal">
+      <div class="container">
+        <span class="case-meta">Frisør · Booking · Designkonsept</span>
+        <h1 class="display">Frisørsalong</h1>
+        <p class="lead">
+          Et rolig, redaksjonelt uttrykk for en mindre salong — bygget rundt
+          online booking, prisliste og bildegalleri.
+        </p>
+      </div>
+    </section>
+
+    <!-- Big preview (uses scaled-up salon card design) -->
+    <section class="case-preview-section">
+      <div class="container">
+        <div class="case-preview case-preview--salon reveal">
+          <div class="salon-stage case-preview-stage">
+            <span class="salon-eyebrow">Salong · Oslo</span>
+            <div class="case-preview-cluster">
+              <h2 class="salon-title">Stil <em>som</em><br/>varer.</h2>
+              <p class="case-preview-tagline">
+                Klipp, farge og styling — i en salong med plass til ro.
+              </p>
+            </div>
+            <div class="case-preview-foot">
+              <div class="salon-meta">
+                <span>Est. 2018</span>
+                <span class="salon-line" aria-hidden="true"></span>
+                <span>Karl Johans gate</span>
+              </div>
+              <div class="case-preview-actions">
+                <span class="case-preview-btn case-preview-btn--solid">Bestill time</span>
+                <span class="case-preview-btn case-preview-btn--ghost">Se priser</span>
+              </div>
+            </div>
+          </div>
+          <span class="salon-circle" aria-hidden="true"></span>
+          <span class="salon-dot" aria-hidden="true"></span>
+          <span class="salon-stripe" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description + Info sidebar -->
+    <section class="case-body section">
+      <div class="container case-body-grid">
+        <div class="case-body-main reveal">
+          <h2 class="case-h2">Om konseptet</h2>
+          <p>
+            Dette er et eget designkonsept jeg har laget for å vise hvordan en
+            mindre salong kan presentere seg på nett. Mange salonger har sider
+            som drukner i bilder og tekst — her ville jeg gå motsatt vei.
+          </p>
+          <p>
+            Forsiden er rolig og luftig, med tydelig plass til navnet, et kort
+            løfte og to handlinger: bestille time eller se priser. Resten av
+            siden er bygget rundt det folk faktisk leter etter.
+          </p>
+        </div>
+
+        <aside class="case-info reveal">
+          <dl class="case-info-list">
+            <div>
+              <dt>Type</dt>
+              <dd>Designkonsept</dd>
+            </div>
+            <div>
+              <dt>Bransje</dt>
+              <dd>Frisør / skjønnhet</dd>
+            </div>
+            <div>
+              <dt>Sider</dt>
+              <dd>Forside, Booking, Priser, Galleri, Kontakt</dd>
+            </div>
+            <div>
+              <dt>Tek</dt>
+              <dd>HTML, CSS, JavaScript</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="case-features section">
+      <div class="container">
+        <header class="case-section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> Funksjoner</span>
+          <h2 class="display-sm">Hva siden er bygget rundt</h2>
+        </header>
+
+        <ul class="case-feature-list">
+          <li class="reveal">
+            <span class="case-feature-num">01</span>
+            <h3>Online booking</h3>
+            <p>Velg tjeneste, frisør og ledig tid. Bekreftelse på e-post og påminnelse dagen før.</p>
+          </li>
+          <li class="reveal">
+            <span class="case-feature-num">02</span>
+            <h3>Prisliste</h3>
+            <p>Tydelig oversikt over tjenester og priser, gruppert etter klipp, farge og styling.</p>
+          </li>
+          <li class="reveal">
+            <span class="case-feature-num">03</span>
+            <h3>Bildegalleri</h3>
+            <p>Et utvalg arbeider — ryddig presentert, med plass til både portrett og detaljer.</p>
+          </li>
+          <li class="reveal">
+            <span class="case-feature-num">04</span>
+            <h3>Adresse og åpningstider</h3>
+            <p>Det praktiske, lett tilgjengelig: hvor de holder til, åpningstider og telefon.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Mockup: Booking screen -->
+    <section class="case-mockups section">
+      <div class="container">
+        <header class="case-section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> Skjermbilder</span>
+          <h2 class="display-sm">Slik kan det se ut</h2>
+        </header>
+
+        <!-- Booking mockup -->
+        <div class="mockup mockup--salon reveal">
+          <div class="mockup-label">Booking</div>
+          <div class="mockup-pane">
+            <div class="bk-head">
+              <h4>Bestill time</h4>
+              <span>Steg 2 av 3</span>
+            </div>
+
+            <div class="bk-row">
+              <span class="bk-row-label">Tjeneste</span>
+              <span class="bk-row-value">Klipp og styling · 60 min</span>
+            </div>
+            <div class="bk-row">
+              <span class="bk-row-label">Frisør</span>
+              <span class="bk-row-value">Maja</span>
+            </div>
+
+            <div class="bk-divider" aria-hidden="true"></div>
+
+            <div class="bk-week">
+              <div class="bk-day">
+                <span class="bk-day-name">Tir</span>
+                <span class="bk-day-date">14</span>
+              </div>
+              <div class="bk-day bk-day--active">
+                <span class="bk-day-name">Ons</span>
+                <span class="bk-day-date">15</span>
+              </div>
+              <div class="bk-day">
+                <span class="bk-day-name">Tor</span>
+                <span class="bk-day-date">16</span>
+              </div>
+              <div class="bk-day">
+                <span class="bk-day-name">Fre</span>
+                <span class="bk-day-date">17</span>
+              </div>
+              <div class="bk-day bk-day--off">
+                <span class="bk-day-name">Lør</span>
+                <span class="bk-day-date">18</span>
+              </div>
+            </div>
+
+            <div class="bk-slots">
+              <span class="bk-slot">09:00</span>
+              <span class="bk-slot bk-slot--taken">10:30</span>
+              <span class="bk-slot bk-slot--selected">12:00</span>
+              <span class="bk-slot">13:30</span>
+              <span class="bk-slot">15:00</span>
+              <span class="bk-slot bk-slot--taken">16:30</span>
+            </div>
+
+            <div class="bk-foot">
+              <span class="bk-foot-summary">Ons 15. mai · 12:00 · Maja</span>
+              <span class="bk-foot-cta">Bekreft →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prisliste mockup -->
+        <div class="mockup mockup--salon mockup--priser reveal">
+          <div class="mockup-label">Prisliste</div>
+          <div class="mockup-pane">
+            <div class="pr-head">
+              <h4>Priser</h4>
+              <span>Inkluderer mva.</span>
+            </div>
+
+            <div class="pr-group">
+              <h5>Klipp</h5>
+              <ul>
+                <li><span>Klipp dame</span><i></i><b>fra 695 kr</b></li>
+                <li><span>Klipp herre</span><i></i><b>fra 545 kr</b></li>
+                <li><span>Pannelugg</span><i></i><b>195 kr</b></li>
+              </ul>
+            </div>
+
+            <div class="pr-group">
+              <h5>Farge</h5>
+              <ul>
+                <li><span>Helfarge</span><i></i><b>fra 1 295 kr</b></li>
+                <li><span>Striper</span><i></i><b>fra 1 495 kr</b></li>
+                <li><span>Balayage</span><i></i><b>fra 1 895 kr</b></li>
+              </ul>
+            </div>
+
+            <div class="pr-group">
+              <h5>Styling</h5>
+              <ul>
+                <li><span>Føn og styling</span><i></i><b>495 kr</b></li>
+                <li><span>Brudoppsetting</span><i></i><b>fra 1 295 kr</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / next -->
+    <section class="case-cta section">
+      <div class="container case-cta-inner reveal">
+        <h2 class="display-sm">Vil du ha noe lignende?</h2>
+        <p>
+          Har du en idé eller et behov som dette? Send en kort melding,
+          så svarer jeg innen et døgn.
+        </p>
+        <div class="case-cta-actions">
+          <a href="../index.html#contact" class="btn btn-primary">Ta kontakt</a>
+          <a href="../index.html#portfolio" class="btn btn-ghost">Se andre prosjekter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html#hero" class="logo">
+          <span class="logo-mark" aria-hidden="true">I</span>
+          <span class="logo-text">Iversen<span class="logo-accent">Web</span></span>
+        </a>
+        <p>Nettsider for små og mellomstore bedrifter i Norge.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigasjon</h4>
+          <ul>
+            <li><a href="../index.html#services">Tjenester</a></li>
+            <li><a href="../index.html#portfolio">Prosjekter</a></li>
+            <li><a href="../index.html#why">Slik jobber jeg</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:kimatcode@gmail.com">kimatcode@gmail.com</a></li>
+            <li>Hele Norge</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="year"></span> Iversen Web</span>
+        <span>Laget for hånd, fra Norge</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

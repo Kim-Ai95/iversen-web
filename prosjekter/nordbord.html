@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Restaurant Nordbord — case-studie · Iversen Web</title>
+  <meta
+    name="description"
+    content="Designkonsept for en restaurant med digital meny, bordreservasjon og bildegalleri. Et eget konsept laget av Iversen Web."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 font-family=%22Inter,Arial%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>I</text></svg>"
+  />
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="../index.html#hero" class="logo" aria-label="Iversen Web – forside">
+        <span class="logo-mark" aria-hidden="true">I</span>
+        <span class="logo-text">Iversen<span class="logo-accent">Web</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Hovedmeny">
+        <ul class="nav-list">
+          <li><a href="../index.html#services">Tjenester</a></li>
+          <li><a href="../index.html#portfolio">Prosjekter</a></li>
+          <li><a href="../index.html#why">Slik jobber jeg</a></li>
+          <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary btn-sm nav-cta">Ta kontakt</a>
+      </nav>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Åpne meny"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="case-topbar">
+      <div class="container">
+        <a href="../index.html#portfolio" class="case-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Tilbake til prosjekter
+        </a>
+      </div>
+    </div>
+
+    <section class="case-hero reveal">
+      <div class="container">
+        <span class="case-meta">Restaurant · Meny · Designkonsept</span>
+        <h1 class="display">Restaurant Nordbord</h1>
+        <p class="lead">
+          Et varmt, stemningsfullt uttrykk for en restaurant som lever av
+          sesongen — bygget rundt meny, reservasjon og bilder.
+        </p>
+      </div>
+    </section>
+
+    <!-- Big preview using restaurant card design -->
+    <section class="case-preview-section">
+      <div class="container">
+        <div class="case-preview case-preview--restaurant reveal">
+          <div class="restaurant-photo" aria-hidden="true"></div>
+          <div class="restaurant-grain" aria-hidden="true"></div>
+          <div class="restaurant-stage">
+            <span class="restaurant-tag">Åpent · 17–23</span>
+            <div class="restaurant-bottom">
+              <h2 class="restaurant-title">Nordbord</h2>
+              <p class="restaurant-tagline">Sesongbasert. Vedfyrt. Lokalt.</p>
+              <p class="case-preview-tagline-light">
+                En liten restaurant på 28 plasser, med en meny som endrer seg hver måned.
+              </p>
+              <div class="restaurant-actions">
+                <span class="restaurant-cta">Reserver bord</span>
+                <span class="restaurant-phone">+47 22 33 44 55</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-body section">
+      <div class="container case-body-grid">
+        <div class="case-body-main reveal">
+          <h2 class="case-h2">Om konseptet</h2>
+          <p>
+            Nordbord er et fiktivt navn — konseptet handler om hvordan en mindre
+            restaurant kan presentere seg uten å forsvinne i bilder eller
+            generiske matsider.
+          </p>
+          <p>
+            Forsiden er bygget rundt stemning og det praktiske: hva slags sted
+            det er, åpningstider, og en tydelig vei til å reservere bord.
+            Resten av siden er menyen, en kort fortelling om stedet, og bilder.
+          </p>
+        </div>
+
+        <aside class="case-info reveal">
+          <dl class="case-info-list">
+            <div>
+              <dt>Type</dt>
+              <dd>Designkonsept</dd>
+            </div>
+            <div>
+              <dt>Bransje</dt>
+              <dd>Restaurant</dd>
+            </div>
+            <div>
+              <dt>Sider</dt>
+              <dd>Forside, Meny, Reservasjon, Om oss, Galleri</dd>
+            </div>
+            <div>
+              <dt>Tek</dt>
+              <dd>HTML, CSS, JavaScript</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="case-features section">
+      <div class="container">
+        <header class="case-section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> Funksjoner</span>
+          <h2 class="display-sm">Hva siden er bygget rundt</h2>
+        </header>
+
+        <ul class="case-feature-list">
+          <li class="reveal">
+            <span class="case-feature-num">01</span>
+            <h3>Digital meny</h3>
+            <p>Sesongmeny som restauranten selv kan oppdatere uten å gå via en utvikler.</p>
+          </li>
+          <li class="reveal">
+            <span class="case-feature-num">02</span>
+            <h3>Bordreservasjon</h3>
+            <p>Skjema med dato, tid og antall personer. Bekreftelse på e-post og varsel til restauranten.</p>
+          </li>
+          <li class="reveal">
+            <span class="case-feature-num">03</span>
+            <h3>Bildegalleri</h3>
+            <p>Store, varme bilder av maten og lokalet — uten at det går utover lastetid.</p>
+          </li>
+          <li class="reveal">
+            <span class="case-feature-num">04</span>
+            <h3>Åpningstider og kart</h3>
+            <p>Det praktiske som gjester leter etter først: når er det åpent, og hvor er det?</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-mockups section">
+      <div class="container">
+        <header class="case-section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> Skjermbilder</span>
+          <h2 class="display-sm">Slik kan det se ut</h2>
+        </header>
+
+        <!-- Menu mockup -->
+        <div class="mockup mockup--restaurant reveal">
+          <div class="mockup-label mockup-label--dark">Sesongmeny</div>
+          <div class="mockup-pane mockup-pane--dark">
+            <div class="mn-head">
+              <span class="mn-eyebrow">Mai</span>
+              <h4>Sesongmeny</h4>
+              <p>Fem retter, tre vinpar — endres hver måned.</p>
+            </div>
+
+            <ol class="mn-courses">
+              <li>
+                <span class="mn-num">01</span>
+                <div class="mn-text">
+                  <h5>Bakt rotgrønnsak</h5>
+                  <p>Brent smør, hasselnøtter, lokal geitost.</p>
+                </div>
+                <span class="mn-price">185</span>
+              </li>
+              <li>
+                <span class="mn-num">02</span>
+                <div class="mn-text">
+                  <h5>Kveite fra Lofoten</h5>
+                  <p>Eple, dill, beurre blanc med vedrøyk.</p>
+                </div>
+                <span class="mn-price">285</span>
+              </li>
+              <li>
+                <span class="mn-num">03</span>
+                <div class="mn-text">
+                  <h5>Lammelår, langsomt stekt</h5>
+                  <p>Vårkål, ramsløk, jus av lammeskank.</p>
+                </div>
+                <span class="mn-price">365</span>
+              </li>
+              <li>
+                <span class="mn-num">04</span>
+                <div class="mn-text">
+                  <h5>Brunost-iskrem</h5>
+                  <p>Mørkt rugbrød, tyttebær, multesyltetøy.</p>
+                </div>
+                <span class="mn-price">145</span>
+              </li>
+            </ol>
+
+            <div class="mn-foot">
+              <span>Hele menyen</span>
+              <b>895 kr · per person</b>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reservation mockup -->
+        <div class="mockup mockup--restaurant mockup--reservasjon reveal">
+          <div class="mockup-label mockup-label--dark">Reservasjon</div>
+          <div class="mockup-pane mockup-pane--dark">
+            <div class="rv-head">
+              <h4>Reserver bord</h4>
+              <span>Bekreftelse på e-post</span>
+            </div>
+
+            <div class="rv-row">
+              <label>Dato</label>
+              <span>Lør 24. mai</span>
+            </div>
+            <div class="rv-row">
+              <label>Tid</label>
+              <div class="rv-times">
+                <span>17:00</span>
+                <span>17:30</span>
+                <span class="rv-time--active">19:00</span>
+                <span>19:30</span>
+                <span class="rv-time--off">21:00</span>
+              </div>
+            </div>
+            <div class="rv-row">
+              <label>Personer</label>
+              <div class="rv-people">
+                <span>1</span>
+                <span>2</span>
+                <span class="rv-people--active">3</span>
+                <span>4</span>
+                <span>5+</span>
+              </div>
+            </div>
+
+            <div class="rv-divider" aria-hidden="true"></div>
+
+            <div class="rv-summary">
+              <span>Lør 24. mai · 19:00 · 3 personer</span>
+              <b>Til neste steg →</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-cta section">
+      <div class="container case-cta-inner reveal">
+        <h2 class="display-sm">Vil du ha noe lignende?</h2>
+        <p>
+          Driver du en restaurant eller noe i samme gate? Send en kort melding,
+          så svarer jeg innen et døgn.
+        </p>
+        <div class="case-cta-actions">
+          <a href="../index.html#contact" class="btn btn-primary">Ta kontakt</a>
+          <a href="../index.html#portfolio" class="btn btn-ghost">Se andre prosjekter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html#hero" class="logo">
+          <span class="logo-mark" aria-hidden="true">I</span>
+          <span class="logo-text">Iversen<span class="logo-accent">Web</span></span>
+        </a>
+        <p>Nettsider for små og mellomstore bedrifter i Norge.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigasjon</h4>
+          <ul>
+            <li><a href="../index.html#services">Tjenester</a></li>
+            <li><a href="../index.html#portfolio">Prosjekter</a></li>
+            <li><a href="../index.html#why">Slik jobber jeg</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:kimatcode@gmail.com">kimatcode@gmail.com</a></li>
+            <li>Hele Norge</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="year"></span> Iversen Web</span>
+        <span>Laget for hånd, fra Norge</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

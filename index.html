@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Iversen Web – Nettsider for små og mellomstore bedrifter</title>
+  <meta
+    name="description"
+    content="Iversen Web designer og bygger nettsider for små og mellomstore bedrifter i Norge — fra første skisse til ferdig side i drift."
+  />
+  <meta name="author" content="Iversen Web" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Iversen Web – Nettsider for små og mellomstore bedrifter" />
+  <meta property="og:description" content="Frilans webutvikler i Norge. Egne design fra bunnen av — ingen ferdigkjøpte temaer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 font-family=%22Inter,Arial%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>I</text></svg>"
+  />
+</head>
+<body>
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Iversen Web – forside">
+        <span class="logo-mark" aria-hidden="true">I</span>
+        <span class="logo-text">Iversen<span class="logo-accent">Web</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Hovedmeny">
+        <ul class="nav-list">
+          <li><a href="#services">Tjenester</a></li>
+          <li><a href="#portfolio">Prosjekter</a></li>
+          <li><a href="#why">Slik jobber jeg</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Ta kontakt</a>
+      </nav>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Åpne meny"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =============== HERO =============== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <span class="eyebrow">
+            <span class="dot"></span> Frilans webutvikler · Norge
+          </span>
+          <h1 class="display">
+            Nettsider for små og mellomstore <span class="text-gradient">bedrifter</span>.
+          </h1>
+          <p class="lead">
+            Jeg designer og bygger nettsider for små og mellomstore bedrifter
+            i Norge — fra første skisse til ferdig side i drift.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              Start et prosjekt
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#portfolio" class="btn btn-ghost">Se prosjekter</a>
+          </div>
+
+          <ul class="hero-meta" aria-label="Nøkkelpunkter">
+            <li>
+              <strong>2–3 uker</strong>
+              <span>Typisk leveringstid</span>
+            </li>
+            <li>
+              <strong>Mobil først</strong>
+              <span>Fungerer på alle skjermer</span>
+            </li>
+            <li>
+              <strong>SEO-klar</strong>
+              <span>Synlig i Google</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-aside reveal" aria-label="Ledig kapasitet">
+          <div class="hero-aside-frame">
+            <span class="hero-aside-tag">Ledig</span>
+            <strong class="hero-aside-num">2<small>/3</small></strong>
+            <span class="hero-aside-sub">plasser denne måneden</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =============== SERVICES =============== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> Tjenester</span>
+          <h2 class="display-sm">Det jeg kan hjelpe med</h2>
+          <p class="section-lead">
+            Et lite knippe ting jeg gjør ofte — alltid tilpasset bedriften det gjelder.
+          </p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="card service reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+                <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Z" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M3 8h18M7 21h10M12 17v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Ny nettside</h3>
+            <p>Nettsider bygget fra bunnen av, tilpasset bedriften og det dere faktisk trenger.</p>
+            <ul class="service-points">
+              <li>Eget design, ikke en mal</li>
+              <li>Mobilvennlig og rask</li>
+              <li>Tydelig struktur og innhold</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+                <path d="M4 4h10l6 6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M14 4v6h6M8 13l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Redesign</h3>
+            <p>Oppdatert design og struktur for nettsiden dere allerede har.</p>
+            <ul class="service-points">
+              <li>Nytt, ryddig uttrykk</li>
+              <li>Bedre brukeropplevelse</li>
+              <li>Raskere lastetid</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+                <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Korte prosjekter</h3>
+            <p>Tett oppfølging og klar fremdrift fra første samtale til lansering.</p>
+            <ul class="service-points">
+              <li>Jevnlige oppdateringer</li>
+              <li>Tydelig kommunikasjon</li>
+              <li>Levering på 2–3 uker</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== PORTFOLIO =============== -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> Prosjekter</span>
+          <h2 class="display-sm">Tre designkonsepter</h2>
+          <p class="section-lead">
+            Egne konsepter jeg har laget for å vise hvordan en nettside kan løses for ulike bransjer.
+          </p>
+        </header>
+
+        <div class="grid grid-3 portfolio-grid">
+          <!-- Project 1: Frisør — soft, elegant, editorial -->
+          <article class="card project project--salon reveal">
+            <a href="prosjekter/frisor.html" class="project-media salon" aria-label="Se case-studie: Frisør">
+              <div class="salon-stage">
+                <span class="salon-eyebrow">Salong · Oslo</span>
+                <h4 class="salon-title">Stil <em>som</em><br/>varer.</h4>
+                <div class="salon-meta">
+                  <span>Est. 2018</span>
+                  <span class="salon-line" aria-hidden="true"></span>
+                  <span>Karl Johans gate</span>
+                </div>
+              </div>
+              <span class="salon-circle" aria-hidden="true"></span>
+              <span class="salon-dot" aria-hidden="true"></span>
+              <span class="salon-stripe" aria-hidden="true"></span>
+            </a>
+            <div class="project-body">
+              <span class="tag">Frisør · Booking</span>
+              <h3>Frisørsalong</h3>
+              <p>Online booking, prisliste og bildegalleri — i et rolig, redaksjonelt uttrykk.</p>
+              <a href="prosjekter/frisor.html" class="btn btn-outline btn-sm">Se prosjekt →</a>
+            </div>
+          </article>
+
+          <!-- Project 2: Restaurant — image-driven, warm, magazine spread -->
+          <article class="card project project--restaurant reveal">
+            <a href="prosjekter/nordbord.html" class="project-media restaurant" aria-label="Se case-studie: Restaurant Nordbord">
+              <div class="restaurant-photo" aria-hidden="true"></div>
+              <div class="restaurant-grain" aria-hidden="true"></div>
+              <div class="restaurant-stage">
+                <span class="restaurant-tag">Åpent · 17–23</span>
+                <div class="restaurant-bottom">
+                  <h4 class="restaurant-title">Nordbord</h4>
+                  <p class="restaurant-tagline">Sesongbasert. Vedfyrt. Lokalt.</p>
+                  <div class="restaurant-actions">
+                    <span class="restaurant-cta">Reserver bord</span>
+                    <span class="restaurant-phone">+47 22 33 44 55</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="project-body">
+              <span class="tag">Restaurant · Meny</span>
+              <h3>Restaurant Nordbord</h3>
+              <p>Digital meny, bordreservasjon og bilder — et varmt uttrykk for en restaurant.</p>
+              <a href="prosjekter/nordbord.html" class="btn btn-outline btn-sm">Se prosjekt →</a>
+            </div>
+          </article>
+
+          <!-- Project 3: Lokal bedrift — clean, simple, practical -->
+          <article class="card project project--local reveal">
+            <a href="prosjekter/fjord-handverk.html" class="project-media local" aria-label="Se case-studie: Fjord Håndverk">
+              <div class="local-stage">
+                <div class="local-top">
+                  <b>Fjord Håndverk</b>
+                  <span class="local-phone">941 23 456</span>
+                </div>
+                <h4 class="local-title">Snekker- og tømrertjenester på Vestlandet.</h4>
+                <ul class="local-services">
+                  <li>Tilbygg og renovering</li>
+                  <li>Kjøkken og bad</li>
+                  <li>Terrasser</li>
+                </ul>
+                <div class="local-foot">
+                  <span class="local-cta">Be om gratis befaring →</span>
+                  <span class="local-since">Lokalt siden 2008</span>
+                </div>
+              </div>
+            </a>
+            <div class="project-body">
+              <span class="tag">Håndverker · Lokal</span>
+              <h3>Fjord Håndverk</h3>
+              <p>Tjenester, referanser og en enkel måte å be om befaring på.</p>
+              <a href="prosjekter/fjord-handverk.html" class="btn btn-outline btn-sm">Se prosjekt →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== WHY CHOOSE ME =============== -->
+    <section class="section why" id="why">
+      <div class="container why-grid">
+        <div class="why-intro reveal">
+          <span class="eyebrow"><span class="dot"></span> Slik jobber jeg</span>
+          <h2 class="display-sm">Tre ting jeg legger vekt på</h2>
+          <p class="section-lead">
+            Hvert prosjekt er litt forskjellig, men det er noen prinsipper jeg
+            holder fast ved hver gang.
+          </p>
+          <a href="#contact" class="btn btn-primary">Ta kontakt</a>
+        </div>
+
+        <ul class="why-list">
+          <li class="why-item reveal">
+            <span class="why-num">01</span>
+            <div>
+              <h3>Eget design — ikke en mal</h3>
+              <p>
+                Jeg starter alltid med innholdet og bygger designet rundt det.
+                Ingen ferdigkjøpte temaer eller standardelementer.
+              </p>
+            </div>
+          </li>
+          <li class="why-item reveal">
+            <span class="why-num">02</span>
+            <div>
+              <h3>Korte prosjekter</h3>
+              <p>
+                De fleste sidene er ferdige på 2–3 uker. Du får jevnlige
+                oppdateringer underveis, og ingenting blir liggende uavklart.
+              </p>
+            </div>
+          </li>
+          <li class="why-item reveal">
+            <span class="why-num">03</span>
+            <div>
+              <h3>Tenkt på besøkende</h3>
+              <p>
+                Tydelig struktur, kort tekst og enkle neste steg. Målet er at
+                folk skal finne det de leter etter — ikke gjette.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============== CONTACT =============== -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro reveal">
+          <span class="eyebrow"><span class="dot"></span> Kontakt</span>
+          <h2 class="display-sm">Lurer du på noe?</h2>
+          <p class="section-lead">
+            Send en kort melding om hva du har i tankene, så svarer jeg innen et døgn.
+          </p>
+
+          <ul class="contact-info">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+                <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z" stroke="currentColor" stroke-width="1.7"/>
+                <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="mailto:kimatcode@gmail.com">kimatcode@gmail.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+              <span>Svar innen et døgn</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+                <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.7"/>
+                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+              </svg>
+              <span>Møter digitalt — kunder over hele Norge</span>
+            </li>
+          </ul>
+        </div>
+
+        <form
+          class="contact-form reveal"
+          id="contactForm"
+          action="https://formspree.io/f/xgodyqkk"
+          method="POST"
+          novalidate
+        >
+          <div class="form-row">
+            <label for="name">Navn</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+              placeholder="Ditt navn"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="email">E-post</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="din@epost.no"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Melding</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Fortell kort om bedriften og hva du ser etter."
+            ></textarea>
+          </div>
+
+          <!-- Honeypot for spam (Formspree-kompatibelt) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Send melding
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-mark" aria-hidden="true">I</span>
+          <span class="logo-text">Iversen<span class="logo-accent">Web</span></span>
+        </a>
+        <p>Nettsider for små og mellomstore bedrifter i Norge.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigasjon</h4>
+          <ul>
+            <li><a href="#services">Tjenester</a></li>
+            <li><a href="#portfolio">Prosjekter</a></li>
+            <li><a href="#why">Slik jobber jeg</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:kimatcode@gmail.com">kimatcode@gmail.com</a></li>
+            <li>Hele Norge</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="year"></span> Iversen Web</span>
+        <span>Laget for hånd, fra Norge</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
