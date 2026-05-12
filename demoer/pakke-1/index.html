@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2a1d10" />
+  <title>Lune Salong – Klipp, farge og styling i Oslo</title>
+  <meta name="description" content="Lune Salong er en liten frisørsalong i Oslo. Klipp, farge og styling i et rolig miljø." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232a1d10%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-family=%22Georgia,serif%22 font-style=%22italic%22 text-anchor=%22middle%22 fill=%22%23faf6f1%22>L</text></svg>" />
+</head>
+<body>
+  <!-- Demo info ribbon (only shown on the demo, not in real site) -->
+  <div class="demo-ribbon">
+    <a href="../../index.html#portfolio" class="demo-ribbon-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Tilbake til Iversen Web
+    </a>
+    <span class="demo-ribbon-tag"><span class="demo-ribbon-dot"></span> Demo · Pakke 1</span>
+  </div>
+
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="wrap nav-wrap">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">L</span>
+        <span>Lune <em>Salong</em></span>
+      </a>
+      <nav class="nav" aria-label="Hovedmeny">
+        <a href="#om">Om</a>
+        <a href="#priser">Priser</a>
+        <a href="#galleri">Galleri</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a href="#kontakt" class="cta-pill">Bestill time</a>
+      <button class="nav-burger" id="navBurger" aria-label="Meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-grid">
+        <div class="hero-text reveal">
+          <span class="eyebrow"><span class="eyebrow-dash"></span> Frisør · Oslo</span>
+          <h1 class="hero-title">
+            Stil <em>som</em><br/>varer.
+          </h1>
+          <p class="hero-lead">
+            En liten salong med plass til ro. Klipp, farge og styling
+            i en atmosfære som er like personlig som resultatet.
+          </p>
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-dark">Bestill time</a>
+            <a href="#priser" class="btn btn-link">Se priser →</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>Est.</strong><span>2019</span></div>
+            <span class="hero-meta-sep"></span>
+            <div><strong>Karl Johans gate</strong><span>Oslo sentrum</span></div>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <div class="photo photo-main">
+            <span class="photo-tag">Klipp · Farge</span>
+          </div>
+          <div class="photo photo-mini">
+            <span class="photo-mini-shine"></span>
+          </div>
+          <div class="hero-photo-deco" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OM ========== -->
+    <section class="section om" id="om">
+      <div class="wrap om-grid">
+        <div class="om-image reveal" aria-hidden="true">
+          <div class="om-photo"></div>
+          <div class="om-badge">
+            <strong>4 år</strong>
+            <span>i sentrum</span>
+          </div>
+        </div>
+        <div class="om-text reveal">
+          <span class="eyebrow"><span class="eyebrow-dash"></span> Om oss</span>
+          <h2 class="h2">En salong bygget på <em>roen</em>.</h2>
+          <p>
+            Vi tror gode klipper begynner med en god prat. Hos oss tar vi
+            tiden vi trenger — for å forstå håret ditt, ønskene dine og
+            hvordan stilen skal sitte mellom besøkene.
+          </p>
+          <p>
+            Tre frisører, to behandlingsstoler og en kaffe som er bedre
+            enn de fleste. Det er Lune.
+          </p>
+
+          <ul class="om-points">
+            <li><span></span> Personlig oppfølging</li>
+            <li><span></span> Skånsomme produkter</li>
+            <li><span></span> Erfarne frisører</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TJENESTER / PRISER ========== -->
+    <section class="section priser" id="priser">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dash"></span> Tjenester</span>
+          <h2 class="h2">Priser og behandlinger</h2>
+          <p class="section-lead">Alle priser inkluderer mva. Ta gjerne kontakt om du er usikker på hva du trenger.</p>
+        </header>
+
+        <div class="priser-grid">
+          <article class="pris-card reveal">
+            <header class="pris-head">
+              <span class="pris-num">01</span>
+              <h3>Klipp</h3>
+            </header>
+            <ul class="pris-list">
+              <li><span>Klipp dame</span><i></i><b>fra 695 kr</b></li>
+              <li><span>Klipp herre</span><i></i><b>fra 545 kr</b></li>
+              <li><span>Pannelugg</span><i></i><b>195 kr</b></li>
+              <li><span>Barn (under 12)</span><i></i><b>395 kr</b></li>
+            </ul>
+          </article>
+
+          <article class="pris-card pris-card--feature reveal">
+            <header class="pris-head">
+              <span class="pris-num">02</span>
+              <h3>Farge</h3>
+            </header>
+            <ul class="pris-list">
+              <li><span>Helfarge</span><i></i><b>fra 1 295 kr</b></li>
+              <li><span>Striper</span><i></i><b>fra 1 495 kr</b></li>
+              <li><span>Balayage</span><i></i><b>fra 1 895 kr</b></li>
+              <li><span>Toning</span><i></i><b>fra 495 kr</b></li>
+            </ul>
+            <span class="pris-feature-pill">Populært</span>
+          </article>
+
+          <article class="pris-card reveal">
+            <header class="pris-head">
+              <span class="pris-num">03</span>
+              <h3>Styling</h3>
+            </header>
+            <ul class="pris-list">
+              <li><span>Føn og styling</span><i></i><b>495 kr</b></li>
+              <li><span>Oppsetting</span><i></i><b>895 kr</b></li>
+              <li><span>Brudoppsetting</span><i></i><b>fra 1 295 kr</b></li>
+              <li><span>Konsultasjon</span><i></i><b>Gratis</b></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALLERI ========== -->
+    <section class="section galleri" id="galleri">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dash"></span> Galleri</span>
+          <h2 class="h2">Et utvalg arbeider</h2>
+        </header>
+
+        <div class="galleri-grid">
+          <div class="galleri-item reveal gi-1"><span class="gi-tag">Klipp</span></div>
+          <div class="galleri-item reveal gi-2"><span class="gi-tag">Balayage</span></div>
+          <div class="galleri-item reveal gi-3"><span class="gi-tag">Styling</span></div>
+          <div class="galleri-item reveal gi-4"><span class="gi-tag">Farge</span></div>
+          <div class="galleri-item reveal gi-5"><span class="gi-tag">Bryllup</span></div>
+          <div class="galleri-item reveal gi-6"><span class="gi-tag">Klipp</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== KONTAKT ========== -->
+    <section class="section kontakt" id="kontakt">
+      <div class="wrap kontakt-grid">
+        <div class="kontakt-info reveal">
+          <span class="eyebrow"><span class="eyebrow-dash"></span> Kontakt</span>
+          <h2 class="h2">Bestill en time hos oss</h2>
+          <p>Ring, send melding, eller fyll inn skjemaet under. Vi svarer som regel samme dag.</p>
+
+          <ul class="kontakt-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <a href="tel:+4722123456">22 12 34 56</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <a href="mailto:hei@lunesalong.no">hei@lunesalong.no</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>Karl Johans gate 32, 0162 Oslo</span>
+            </li>
+          </ul>
+
+          <div class="apningstider">
+            <h4>Åpningstider</h4>
+            <div class="apningstider-row"><span>Man – Fre</span><span>09:00 – 19:00</span></div>
+            <div class="apningstider-row"><span>Lør</span><span>10:00 – 16:00</span></div>
+            <div class="apningstider-row"><span>Søn</span><span>Stengt</span></div>
+          </div>
+        </div>
+
+        <form class="kontakt-form reveal" id="bookForm" novalidate>
+          <h3>Send oss en melding</h3>
+
+          <label>
+            <span>Navn</span>
+            <input type="text" name="navn" required placeholder="Ditt navn" />
+          </label>
+
+          <label>
+            <span>Telefon eller e-post</span>
+            <input type="text" name="kontakt" required placeholder="22 12 34 56" />
+          </label>
+
+          <label>
+            <span>Ønsket behandling</span>
+            <select name="behandling">
+              <option>Klipp</option>
+              <option>Farge</option>
+              <option>Styling</option>
+              <option>Annet</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Melding</span>
+            <textarea name="melding" rows="3" placeholder="Når passer det? Spesielle ønsker?"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-dark btn-block">Send forespørsel</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a href="#hero" class="brand">
+          <span class="brand-mark">L</span>
+          <span>Lune <em>Salong</em></span>
+        </a>
+        <p>En liten frisørsalong med store ambisjoner.</p>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="year"></span> Lune Salong</span>
+        <span>Org. 999 123 456</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating annotation bubbles -->
+  <aside class="demo-notes" id="demoNotes" aria-label="Hva pakken inneholder">
+    <button class="demo-notes-toggle" id="demoNotesToggle" aria-expanded="true">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Hva er inkludert</span>
+    </button>
+    <div class="demo-notes-panel">
+      <header>
+        <span class="demo-notes-tier">Pakke 1 · Enkel</span>
+        <strong>1 side · landingsside</strong>
+      </header>
+      <ul>
+        <li>Hero med tydelig CTA</li>
+        <li>Om-seksjon</li>
+        <li>Tjenester og priser</li>
+        <li>Galleri</li>
+        <li>Kontakt &amp; åpningstider</li>
+        <li>Skjema med validering</li>
+        <li>Mobilvennlig &amp; rask</li>
+      </ul>
+      <p class="demo-notes-foot">Perfekt for små bedrifter som vil ha det enkelt — én side, alt på plass.</p>
+    </div>
+  </aside>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
