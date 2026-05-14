@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- TEST -->
 <html lang="nb">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#0b1220" />
   <title>Iversen Web – Nettsider for små og mellomstore bedrifter</title>
   <meta
     name="description"
@@ -28,7 +27,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link
     rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 font-family=%22Inter,Arial%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>I</text></svg>"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%231e40af%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 font-family=%22Inter,Arial%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>I</text></svg>"
   />
 </head>
 <body>
@@ -44,7 +43,7 @@
       <nav class="nav" id="nav" aria-label="Hovedmeny">
         <ul class="nav-list">
           <li><a href="#services">Tjenester</a></li>
-          <li><a href="#portfolio">Prosjekter</a></li>
+          <li><a href="#portfolio">Pakker</a></li>
           <li><a href="#why">Slik jobber vi</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
@@ -69,18 +68,23 @@
     <!-- =============== HERO =============== -->
     <section class="hero" id="hero">
       <div class="hero-bg" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="grid-overlay"></div>
+        <div class="aurora">
+          <span class="aurora-blob aurora-1"></span>
+          <span class="aurora-blob aurora-2"></span>
+          <span class="aurora-blob aurora-3"></span>
+        </div>
+        <div class="hero-grid"></div>
+        <div class="hero-glow" data-parallax></div>
       </div>
 
       <div class="container hero-inner">
         <div class="hero-content reveal">
-          <span class="eyebrow">
+          <span class="eyebrow eyebrow-pill">
             <span class="dot"></span> Webdesign og utvikling · Norge
           </span>
-          <h1 class="display">
-            Nettsider for små og mellomstore <span class="text-gradient">bedrifter</span>.
+          <h1 class="display hero-display">
+            Nettsider for små og mellomstore
+            <span class="text-gradient text-gradient-anim">bedrifter</span>.
           </h1>
           <p class="lead">
             Vi designer og bygger nettsider for små og mellomstore bedrifter
@@ -88,13 +92,13 @@
           </p>
 
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">
+            <a href="#contact" class="btn btn-primary btn-glow">
               Start et prosjekt
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a href="#portfolio" class="btn btn-ghost">Se prosjekter</a>
+            <a href="#portfolio" class="btn btn-ghost">Se pakker</a>
           </div>
 
           <ul class="hero-meta" aria-label="Nøkkelpunkter">
@@ -107,19 +111,109 @@
               <span>Fungerer på alle skjermer</span>
             </li>
             <li>
-              <strong>Bygget for synlighet</strong>
-              <span>Tilstedeværelse på nett</span>
+              <strong>Bygget i Norge</strong>
+              <span>Egne design, ingen maler</span>
             </li>
           </ul>
         </div>
 
-        <aside class="hero-aside reveal" aria-label="Ledig kapasitet">
-          <div class="hero-aside-frame">
-            <span class="hero-aside-tag">Kapasitet</span>
-            <strong class="hero-aside-num">1–2<small> nye</small></strong>
-            <span class="hero-aside-sub">prosjekter denne måneden</span>
+        <aside class="hero-showcase reveal" aria-label="Eksempel-nettside">
+          <div class="hero-browser" data-tilt>
+            <div class="browser-bar">
+              <span class="browser-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="browser-url">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1 17.93A8.01 8.01 0 0 1 4.07 13H6a8 8 0 0 0 5 6.93Zm-5-9H4.07A8.01 8.01 0 0 1 11 4.07V6a8 8 0 0 0-5 4.93ZM13 4.07A8.01 8.01 0 0 1 19.93 11H18a8 8 0 0 0-5-6.93Zm5 9h1.93A8.01 8.01 0 0 1 13 19.93V18a8 8 0 0 0 5-4.93Z" fill="currentColor"/>
+                </svg>
+                bedrift.no
+              </span>
+              <span class="browser-action" aria-hidden="true"></span>
+            </div>
+            <div class="browser-body">
+              <div class="bp-nav">
+                <span class="bp-nav-logo">B</span>
+                <span class="bp-nav-link">Hjem</span>
+                <span class="bp-nav-link">Tjenester</span>
+                <span class="bp-nav-link">Kontakt</span>
+              </div>
+
+              <span class="bp-eyebrow">Din bedrift</span>
+              <h4 class="bp-title">Tydelig, rask og <span>brukervennlig</span></h4>
+              <p class="bp-lead">Bygget rundt det du faktisk trenger.</p>
+
+              <div class="bp-actions">
+                <span class="bp-btn bp-btn-primary">Ta kontakt</span>
+                <span class="bp-btn bp-btn-ghost">Les mer</span>
+              </div>
+
+              <div class="bp-cards">
+                <div class="bp-card bp-card--stat">
+                  <span class="bp-card-num">98<i>%</i></span>
+                  <span class="bp-card-bar bp-card-bar-sm"></span>
+                </div>
+                <div class="bp-card bp-card--rating">
+                  <span class="bp-card-stars" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i>
+                  </span>
+                  <span class="bp-card-bar bp-card-bar-sm"></span>
+                </div>
+                <div class="bp-card bp-card--feature">
+                  <span class="bp-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none">
+                      <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="bp-card-bar bp-card-bar-sm"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-float-card" aria-hidden="true">
+            <span class="float-card-pulse">
+              <span class="pulse-dot"></span>
+            </span>
+            <div>
+              <strong>1–2 ledige</strong>
+              <span>prosjekter denne måneden</span>
+            </div>
+          </div>
+
+          <div class="hero-rating-card" aria-hidden="true">
+            <div class="rating-stars">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l3 7 7 .6-5.3 4.7L18 22l-6-3.6L6 22l1.3-7.7L2 9.6 9 9l3-7Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l3 7 7 .6-5.3 4.7L18 22l-6-3.6L6 22l1.3-7.7L2 9.6 9 9l3-7Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l3 7 7 .6-5.3 4.7L18 22l-6-3.6L6 22l1.3-7.7L2 9.6 9 9l3-7Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l3 7 7 .6-5.3 4.7L18 22l-6-3.6L6 22l1.3-7.7L2 9.6 9 9l3-7Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l3 7 7 .6-5.3 4.7L18 22l-6-3.6L6 22l1.3-7.7L2 9.6 9 9l3-7Z" fill="currentColor"/></svg>
+            </div>
+            <span>Skreddersydd design</span>
           </div>
         </aside>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="container">
+        <ul class="trust-strip reveal" aria-label="Inkludert i alle pakker">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Eget design
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Mobilvennlig
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            SEO-klar
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Domene &amp; drift
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -134,153 +228,415 @@
           </p>
         </header>
 
-        <div class="grid grid-3">
-          <article class="card service reveal">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-                <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Z" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M3 8h18M7 21h10M12 17v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-              </svg>
+        <ol class="services-list">
+          <li class="services-row reveal">
+            <span class="services-row-num" aria-hidden="true">01</span>
+            <div class="services-row-main">
+              <h3 class="services-row-title">Ny nettside</h3>
+              <p class="services-row-desc">
+                Nettsider bygget fra bunnen av, tilpasset bedriften og det dere faktisk trenger.
+              </p>
             </div>
-            <h3>Ny nettside</h3>
-            <p>Nettsider bygget fra bunnen av, tilpasset bedriften og det dere faktisk trenger.</p>
-            <ul class="service-points">
+            <ul class="services-row-points">
               <li>Eget design, ikke en mal</li>
               <li>Mobilvennlig og rask</li>
               <li>Tydelig struktur og innhold</li>
             </ul>
-          </article>
-
-          <article class="card service reveal">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-                <path d="M4 4h10l6 6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M14 4v6h6M8 13l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <span class="services-row-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+            </span>
+          </li>
+
+          <li class="services-row reveal">
+            <span class="services-row-num" aria-hidden="true">02</span>
+            <div class="services-row-main">
+              <h3 class="services-row-title">Redesign</h3>
+              <p class="services-row-desc">
+                Oppdatert design og struktur for nettsiden dere allerede har.
+              </p>
             </div>
-            <h3>Redesign</h3>
-            <p>Oppdatert design og struktur for nettsiden dere allerede har.</p>
-            <ul class="service-points">
+            <ul class="services-row-points">
               <li>Nytt, ryddig uttrykk</li>
               <li>Bedre brukeropplevelse</li>
               <li>Raskere lastetid</li>
             </ul>
-          </article>
-
-          <article class="card service reveal">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
-                <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <span class="services-row-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+            </span>
+          </li>
+
+          <li class="services-row reveal">
+            <span class="services-row-num" aria-hidden="true">03</span>
+            <div class="services-row-main">
+              <h3 class="services-row-title">Rask og ryddig prosess</h3>
+              <p class="services-row-desc">
+                Tett oppfølging og klar fremdrift fra første samtale til lansering.
+              </p>
             </div>
-            <h3>Rask og ryddig prosess</h3>
-            <p>Tett oppfølging og klar fremdrift fra første samtale til lansering.</p>
-            <ul class="service-points">
+            <ul class="services-row-points">
               <li>Jevnlige oppdateringer</li>
               <li>Tydelig kommunikasjon</li>
               <li>Levering på 2–3 uker</li>
             </ul>
-          </article>
-        </div>
+            <span class="services-row-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- =============== PORTFOLIO =============== -->
-    <section class="section portfolio" id="portfolio">
+    <!-- =============== PACKAGES =============== -->
+    <section class="section packages" id="portfolio">
+      <div class="packages-bg" aria-hidden="true"></div>
       <div class="container">
         <header class="section-head reveal">
-          <span class="eyebrow"><span class="dot"></span> Prosjekter</span>
-          <h2 class="display-sm">Demo-prosjekter</h2>
+          <span class="eyebrow"><span class="dot"></span> Pakker</span>
+          <h2 class="display-sm">Tre nivåer — en for hver type bedrift</h2>
           <p class="section-lead">
-            Tre demoer som viser hva de ulike pakkene kan inneholde — fra en enkel landingsside til en utvidet bedriftsside.
+            Fra en enkel landingsside til en utvidet bedriftsside. Hver pakke vises gjennom en levende demo.
           </p>
         </header>
 
-        <div class="grid grid-3 portfolio-grid">
-          <!-- Project 1: Frisør — soft, elegant, editorial -->
-          <article class="card project project--salon reveal">
-            <a href="prosjekter/frisor.html" class="project-media salon" aria-label="Se demo: 1 side – Enkel nettside">
-              <div class="salon-stage">
-                <span class="salon-eyebrow">Én side · Landing</span>
-                <h4 class="salon-title">Stil <em>som</em><br/>varer.</h4>
-                <div class="salon-meta">
-                  <span>Est. 2018</span>
-                  <span class="salon-line" aria-hidden="true"></span>
-                  <span>Bestill time →</span>
-                </div>
-              </div>
-              <span class="salon-circle" aria-hidden="true"></span>
-              <span class="salon-dot" aria-hidden="true"></span>
-              <span class="salon-stripe" aria-hidden="true"></span>
-            </a>
-            <div class="project-body">
-              <span class="tag">1 side · Landingsside</span>
-              <h3>1 side – Enkel nettside</h3>
-              <p>En enkel og effektiv nettside som presenterer bedriften og gjør det lett å ta kontakt. Inneholder hero, om bedriften, tjenester og kontakt.</p>
-              <a href="prosjekter/frisor.html" class="btn btn-outline btn-sm">Se demo →</a>
-            </div>
-          </article>
+        <div class="packages-grid">
 
-          <!-- Project 2: Restaurant — image-driven, warm, magazine spread -->
-          <article class="card project project--restaurant reveal">
-            <a href="prosjekter/nordbord.html" class="project-media restaurant" aria-label="Se demo: 3 sider – Standard nettside">
-              <div class="restaurant-photo" aria-hidden="true"></div>
-              <div class="restaurant-grain" aria-hidden="true"></div>
-              <div class="restaurant-stage">
-                <span class="restaurant-tag">Hjem · Meny · Kontakt</span>
-                <div class="restaurant-bottom">
-                  <h4 class="restaurant-title">Nordbord</h4>
-                  <p class="restaurant-tagline">Sesongbasert. Vedfyrt. Lokalt.</p>
-                  <div class="restaurant-actions">
-                    <span class="restaurant-cta">Se meny</span>
-                    <span class="restaurant-phone">+47 22 33 44 55</span>
+          <!-- ===== TIER 1: ENKEL ===== -->
+          <article class="package package--tier-1 reveal">
+            <header class="package-head">
+              <span class="package-tier">
+                <span class="tier-bullet" aria-hidden="true"></span>
+                Enkel
+              </span>
+              <span class="package-pages">1 side</span>
+            </header>
+
+            <a href="demoer/pakke-1/index.html" class="package-preview" aria-label="Se demo: Lune Salong – enkel 1-sides nettside">
+              <div class="demo demo--enkel">
+                <div class="demo-frame">
+                  <div class="demo-chrome">
+                    <span class="demo-chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="demo-chrome-url">lunesalong.no</span>
+                  </div>
+                  <div class="demo-page demo-page--enkel">
+                    <nav class="demo-nav">
+                      <span class="demo-logo">L</span>
+                      <ul class="demo-nav-links">
+                        <li>Hjem</li>
+                        <li>Priser</li>
+                        <li>Galleri</li>
+                        <li>Kontakt</li>
+                      </ul>
+                    </nav>
+
+                    <div class="demo-hero-1">
+                      <span class="demo-pill">Frisør · Oslo</span>
+                      <h6 class="demo-h">Stil <em>som</em> varer.</h6>
+                      <p class="demo-p">Klipp, farge og styling i en salong med plass til ro.</p>
+                      <span class="demo-btn demo-btn--dark">
+                        Bestill time
+                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+
+                    <div class="demo-thumbs">
+                      <span class="demo-thumb demo-thumb-1"></span>
+                      <span class="demo-thumb demo-thumb-2"></span>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <span class="package-hover-cue" aria-hidden="true">
+                Åpne demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </a>
-            <div class="project-body">
-              <span class="tag">3 sider · Standard</span>
-              <h3>3 sider – Standard nettside</h3>
-              <p>En strukturert nettside med egen side for tjenester, informasjon om bedriften og kontakt. Inneholder hjem, tjenester og kontakt.</p>
-              <a href="prosjekter/nordbord.html" class="btn btn-outline btn-sm">Se demo →</a>
+
+            <div class="package-body">
+              <h3>Landingsside</h3>
+              <p>En enkel og effektiv 1-sides nettside som presenterer bedriften og gjør det lett å ta kontakt.</p>
+              <ul class="package-features">
+                <li>Hero med tydelig CTA</li>
+                <li>Om bedriften &amp; tjenester</li>
+                <li>Kontaktskjema</li>
+              </ul>
+              <a href="demoer/pakke-1/index.html" class="btn btn-outline btn-sm package-cta">
+                Se demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
           </article>
 
-          <!-- Project 3: Lokal bedrift — clean, simple, practical -->
-          <article class="card project project--local reveal">
-            <a href="prosjekter/fjord-handverk.html" class="project-media local" aria-label="Se demo: Utvidet nettside">
-              <div class="local-stage">
-                <div class="local-top">
-                  <b>Fjord Håndverk</b>
-                  <span class="local-phone">941 23 456</span>
-                </div>
-                <h4 class="local-title">Snekker- og tømrertjenester på Vestlandet.</h4>
-                <ul class="local-services">
-                  <li>Tilbygg og renovering</li>
-                  <li>Kjøkken og bad</li>
-                  <li>Terrasser og uteplasser</li>
-                  <li>Vinduer og dører</li>
-                  <li>Mindre snekkeroppdrag</li>
-                </ul>
-                <div class="local-foot">
-                  <span class="local-cta">Se prosjekter →</span>
-                  <span class="local-since">Lokalt siden 2008</span>
+          <!-- ===== TIER 2: STANDARD ===== -->
+          <article class="package package--tier-2 reveal">
+            <header class="package-head">
+              <span class="package-tier">
+                <span class="tier-bullet" aria-hidden="true"></span>
+                Standard
+              </span>
+              <span class="package-pages">3 sider</span>
+            </header>
+
+            <a href="demoer/pakke-2/index.html" class="package-preview" aria-label="Se demo: Klar Renhold – 3-sides standard nettside">
+              <div class="demo demo--standard">
+                <div class="demo-frame">
+                  <div class="demo-chrome">
+                    <span class="demo-chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="demo-chrome-url">klarrenhold.no</span>
+                  </div>
+                  <div class="demo-page demo-page--standard">
+                    <nav class="demo-nav demo-nav--klar">
+                      <span class="demo-logo demo-logo--klar">K</span>
+                      <ul class="demo-nav-links">
+                        <li>Hjem</li>
+                        <li>Tjenester</li>
+                        <li>Kontakt</li>
+                      </ul>
+                      <span class="demo-nav-cta demo-nav-cta--klar">Få tilbud</span>
+                    </nav>
+
+                    <div class="demo-hero-2">
+                      <div class="demo-hero-2-text">
+                        <span class="demo-eyebrow-2">
+                          <span class="demo-eyebrow-2-dot"></span>
+                          Renhold · Stor-Oslo
+                        </span>
+                        <h6 class="demo-h demo-h--klar">Rent hjem,<br/><em>uten styr.</em></h6>
+                        <div class="demo-actions">
+                          <span class="demo-btn demo-btn--klar">Få tilbud</span>
+                          <span class="demo-btn demo-btn--klar-ghost">Se tjenester →</span>
+                        </div>
+                      </div>
+                      <div class="demo-hero-2-img demo-hero-2-img--klar" aria-hidden="true">
+                        <span class="demo-hero-2-img-shine"></span>
+                        <span class="demo-hero-2-img-tag">★ 4.9 · 320+ vurderinger</span>
+                      </div>
+                    </div>
+
+                    <div class="demo-section-label demo-section-label--klar">Tjenester</div>
+
+                    <div class="demo-cards-row">
+                      <div class="demo-card-mini demo-card-mini--klar">
+                        <span class="demo-card-icon demo-card-icon--klar">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M3 12l2-9h14l2 9M3 12v8h18v-8M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="demo-bar"></span>
+                        <span class="demo-bar demo-bar--sm"></span>
+                      </div>
+                      <div class="demo-card-mini demo-card-mini--klar">
+                        <span class="demo-card-icon demo-card-icon--klar">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z M4 12h16 M12 4v16" stroke="currentColor" stroke-width="2"/></svg>
+                        </span>
+                        <span class="demo-bar"></span>
+                        <span class="demo-bar demo-bar--sm"></span>
+                      </div>
+                      <div class="demo-card-mini demo-card-mini--klar">
+                        <span class="demo-card-icon demo-card-icon--klar">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M3 21V7l9-4 9 4v14 M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="demo-bar"></span>
+                        <span class="demo-bar demo-bar--sm"></span>
+                      </div>
+                    </div>
+
+                    <div class="demo-stats-row demo-stats-row--klar">
+                      <div><b>12<span>+</span></b><small>år erfaring</small></div>
+                      <div><b>850<span>+</span></b><small>kunder</small></div>
+                      <div><b>4.9<span>★</span></b><small>vurdering</small></div>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <span class="package-hover-cue" aria-hidden="true">
+                Åpne demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
             </a>
-            <div class="project-body">
-              <span class="tag">Utvidet · 4–6 sider</span>
-              <h3>Utvidet nettside</h3>
-              <p>En mer komplett nettside med flere seksjoner og mer dybde om bedriften. Inneholder hjem, om oss, tjenester, prosjekter og kontakt.</p>
-              <a href="prosjekter/fjord-handverk.html" class="btn btn-outline btn-sm">Se demo →</a>
+
+            <div class="package-body">
+              <h3>Standard nettside</h3>
+              <p>En strukturert 3-sides nettside med egen side for tjenester, informasjon om bedriften og kontakt.</p>
+              <ul class="package-features">
+                <li>Hjem, Tjenester &amp; Kontakt</li>
+                <li>Visuelt tilpasset bransje</li>
+                <li>Skalerbar struktur</li>
+              </ul>
+              <a href="demoer/pakke-2/index.html" class="btn btn-outline btn-sm package-cta">
+                Se demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
           </article>
+
+          <!-- ===== TIER 3: PREMIUM ===== -->
+          <article class="package package--tier-3 package--featured reveal">
+            <span class="package-glow" aria-hidden="true"></span>
+            <span class="package-ribbon">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m12 2 2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6L12 2Z" fill="currentColor"/>
+              </svg>
+              Mest verdi
+            </span>
+            <header class="package-head">
+              <span class="package-tier package-tier--premium">
+                <span class="tier-bullet" aria-hidden="true"></span>
+                Premium
+              </span>
+              <span class="package-pages">4–6 sider</span>
+            </header>
+
+            <a href="demoer/pakke-3/index.html" class="package-preview" aria-label="Se demo: Atelier Nord – premium 5-sides nettside">
+              <div class="demo demo--premium">
+                <div class="demo-aura" aria-hidden="true"></div>
+
+                <div class="demo-frame demo-frame--dark">
+                  <div class="demo-chrome demo-chrome--dark">
+                    <span class="demo-chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="demo-chrome-url">ateliernord.no</span>
+                  </div>
+                  <div class="demo-page demo-page--premium">
+                    <div class="demo-page-glow" aria-hidden="true"></div>
+
+                    <nav class="demo-nav demo-nav--premium">
+                      <span class="demo-logo demo-logo--glow demo-logo--serif">A</span>
+                      <ul class="demo-nav-links">
+                        <li>Hjem</li>
+                        <li>Prosjekter</li>
+                        <li>Tjenester</li>
+                        <li>Studio</li>
+                      </ul>
+                      <span class="demo-nav-cta demo-nav-cta--glow">Start prosjekt</span>
+                    </nav>
+
+                    <div class="demo-hero-3">
+                      <span class="demo-eyebrow-3">
+                        <span class="demo-eyebrow-dot"></span>
+                        Arkitekturstudio · Oslo
+                      </span>
+                      <h6 class="demo-h demo-h--light demo-h--serif-light">
+                        Rom som <em>varer</em>.
+                      </h6>
+                      <div class="demo-actions">
+                        <span class="demo-btn demo-btn--gradient">Start prosjekt</span>
+                        <span class="demo-btn demo-btn--ghost-dark">Se arbeid</span>
+                      </div>
+                    </div>
+
+                    <div class="demo-kpis">
+                      <div class="demo-kpi">
+                        <small>Prosjekter</small>
+                        <b><span data-counter="180" data-suffix="+">180+</span></b>
+                        <span class="demo-kpi-trend">↑ 14%</span>
+                      </div>
+                      <div class="demo-kpi">
+                        <small>Priser</small>
+                        <b><span data-counter="12">12</span></b>
+                        <span class="demo-kpi-trend">internasjonalt</span>
+                      </div>
+                      <div class="demo-kpi">
+                        <small>År</small>
+                        <b><span data-counter="17">17</span></b>
+                        <span class="demo-kpi-trend">siden 2008</span>
+                      </div>
+                    </div>
+
+                    <div class="demo-chart">
+                      <div class="demo-chart-head">
+                        <span class="demo-chart-title">Studio-aktivitet</span>
+                        <span class="demo-chart-sub">Q1 → Q4</span>
+                      </div>
+                      <div class="demo-chart-body">
+                        <div class="demo-chart-grid" aria-hidden="true"></div>
+                        <div class="demo-chart-bars" aria-hidden="true">
+                          <span style="--h:32%"></span>
+                          <span style="--h:48%"></span>
+                          <span style="--h:42%"></span>
+                          <span style="--h:65%"></span>
+                          <span style="--h:58%"></span>
+                          <span style="--h:78%"></span>
+                          <span style="--h:92%"></span>
+                        </div>
+                        <svg class="demo-chart-line" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
+                          <defs>
+                            <linearGradient id="chartLine" x1="0" x2="1" y1="0" y2="0">
+                              <stop offset="0%" stop-color="#c9a96e"/>
+                              <stop offset="100%" stop-color="#e6c98a"/>
+                            </linearGradient>
+                          </defs>
+                          <path d="M0 30 L15 22 L30 26 L45 14 L60 18 L75 8 L100 4"
+                                fill="none" stroke="url(#chartLine)" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating elements outside the frame -->
+                <div class="demo-float demo-float-1" aria-hidden="true">
+                  <span class="demo-float-pulse"><span></span></span>
+                  <div>
+                    <b>Nordic Design Award</b>
+                    <small>Vinner · 2025</small>
+                  </div>
+                </div>
+
+                <div class="demo-float demo-float-2" aria-hidden="true">
+                  <span class="demo-float-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <div>
+                    <b>+28%</b>
+                    <small>denne mnd</small>
+                  </div>
+                </div>
+              </div>
+
+              <span class="package-hover-cue" aria-hidden="true">
+                Åpne demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+
+            <div class="package-body">
+              <h3>Utvidet nettside</h3>
+              <p>En komplett premium-nettside med flere sider, prosjektportefølje og rik motion design.</p>
+              <ul class="package-features">
+                <li>5 sider: Hjem, Prosjekter, Tjenester, Studio, Kontakt</li>
+                <li>Prosjektportefølje med filter</li>
+                <li>Kontakt &amp; befaringsskjema</li>
+                <li>Bygget for vekst og SEO</li>
+              </ul>
+              <a href="demoer/pakke-3/index.html" class="btn btn-primary btn-sm btn-glow package-cta">
+                Se demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
         </div>
+
+        <p class="packages-foot reveal">
+          Usikker på hvilken pakke som passer?
+          <a href="#contact">Ta kontakt — vi finner riktig nivå sammen.</a>
+        </p>
       </div>
     </section>
 
     <!-- =============== WHY CHOOSE ME =============== -->
     <section class="section why" id="why">
+      <div class="why-bg" aria-hidden="true">
+        <div class="why-grid-bg"></div>
+        <div class="why-orb why-orb-1"></div>
+        <div class="why-orb why-orb-2"></div>
+      </div>
       <div class="container why-grid">
         <div class="why-intro reveal">
           <span class="eyebrow"><span class="dot"></span> Slik jobber vi</span>
@@ -289,7 +645,7 @@
             Hvert prosjekt er litt forskjellig, men det er noen prinsipper vi
             holder fast ved hver gang.
           </p>
-          <a href="#contact" class="btn btn-primary">Ta kontakt</a>
+          <a href="#contact" class="btn btn-primary btn-glow">Ta kontakt</a>
         </div>
 
         <ul class="why-list">
@@ -324,6 +680,43 @@
             </div>
           </li>
         </ul>
+      </div>
+
+      <div class="container why-process-wrap">
+        <div class="why-process reveal" aria-label="Slik kommer du i gang">
+          <header class="why-process-head">
+            <span class="why-process-eyebrow">
+              <span class="why-process-line"></span>
+              Slik kommer du i gang
+            </span>
+            <p class="why-process-lead">
+              Fire steg fra første samtale til ferdig nettside i drift.
+            </p>
+          </header>
+
+          <ol class="why-process-list">
+            <li class="why-step reveal">
+              <span class="why-step-num">01</span>
+              <h4>Samtale</h4>
+              <p>En kort gjennomgang av behov, mål og rammer — uforpliktende.</p>
+            </li>
+            <li class="why-step reveal">
+              <span class="why-step-num">02</span>
+              <h4>Tilbud</h4>
+              <p>Tydelig pris, leveringstid og hva som er inkludert.</p>
+            </li>
+            <li class="why-step reveal">
+              <span class="why-step-num">03</span>
+              <h4>Bygging</h4>
+              <p>Eget design, jevnlige oppdateringer og rom for justeringer.</p>
+            </li>
+            <li class="why-step reveal">
+              <span class="why-step-num">04</span>
+              <h4>Lansering</h4>
+              <p>Vi setter siden i drift, og hjelper deg gjerne i etterkant.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
@@ -369,6 +762,7 @@
           method="POST"
           novalidate
         >
+          <div class="form-glow" aria-hidden="true"></div>
           <div class="form-row">
             <label for="name">Navn</label>
             <input
@@ -407,14 +801,14 @@
           <!-- Honeypot for spam (Formspree-kompatibelt) -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">
+          <button type="submit" class="btn btn-primary btn-lg btn-block btn-glow">
             Send melding
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
 
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p> 
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -436,7 +830,7 @@
           <h4>Navigasjon</h4>
           <ul>
             <li><a href="#services">Tjenester</a></li>
-            <li><a href="#portfolio">Prosjekter</a></li>
+            <li><a href="#portfolio">Pakker</a></li>
             <li><a href="#why">Slik jobber vi</a></li>
             <li><a href="#contact">Kontakt</a></li>
           </ul>
@@ -454,7 +848,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span>© <span id="year"></span> Iversen Web</span>
-        <span>Laget for hånd, fra Norge</span>
+        <span>Webdesign &amp; utvikling · Norge</span>
       </div>
     </div>
   </footer>

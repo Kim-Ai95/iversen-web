@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Prosjekter – Atelier Nord</title>
+  <meta name="description" content="Et utvalg av arbeider fra Atelier Nord — bolig, næring og offentlige rom." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230a0a0a%22/><text x=%2250%22 y=%2270%22 font-size=%2266%22 font-family=%22Georgia,serif%22 font-style=%22italic%22 text-anchor=%22middle%22 fill=%22%23c9a96e%22>A</text></svg>" />
+</head>
+<body>
+  <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
+
+  <div class="demo-ribbon">
+    <a href="../../index.html#portfolio" class="demo-ribbon-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Tilbake til Iversen Web
+    </a>
+    <span class="demo-ribbon-tag"><span class="demo-ribbon-dot"></span> Demo · Pakke 3 · Premium · 5 sider</span>
+  </div>
+
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <header class="header" id="header">
+    <div class="wrap nav-wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">A</span>
+        <span class="brand-name">Atelier <em>Nord</em></span>
+      </a>
+      <nav class="nav" aria-label="Hovedmeny">
+        <a href="index.html">Hjem</a>
+        <a href="prosjekter.html" class="is-active">Prosjekter</a>
+        <a href="tjenester.html">Tjenester</a>
+        <a href="om.html">Studio</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a href="kontakt.html" class="cta-btn">Start prosjekt</a>
+      <button class="nav-burger" id="navBurger" aria-label="Meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====== PAGE HERO ====== -->
+    <section class="page-hero">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+      </div>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+
+      <div class="wrap">
+        <div class="page-hero-inner reveal">
+          <span class="breadcrumb">
+            <a href="index.html">Hjem</a>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="breadcrumb-current">Prosjekter</span>
+          </span>
+          <span class="eyebrow"><span class="eyebrow-line"></span> Portefølje</span>
+          <h1 class="display">Et utvalg <em>arbeider</em>.</h1>
+          <p class="lead">
+            Et utvalg prosjekter fra de siste årene innen bolig, næring,
+            interiør og offentlig sektor. Hvert prosjekt er utviklet i tett
+            dialog med oppdragsgiver, sted og budsjett.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FILTERS + GRID ====== -->
+    <section class="section projects">
+      <div class="wrap">
+        <header class="projects-head reveal">
+          <div>
+            <span class="eyebrow"><span class="eyebrow-line"></span> Filtrér</span>
+            <h2 class="h2" style="margin-top: 1rem;">Bla i alle <em>prosjekter</em></h2>
+          </div>
+          <div class="project-filters" data-filters role="tablist">
+            <button class="is-active" data-cat="all">Alle</button>
+            <button data-cat="bolig">Bolig</button>
+            <button data-cat="naering">Næring</button>
+            <button data-cat="offentlig">Offentlig</button>
+            <button data-cat="interior">Interiør</button>
+          </div>
+        </header>
+
+        <div class="projects-grid" data-filter-target>
+          <a href="#" class="project-card reveal" data-cat="bolig">
+            <div class="project-media">
+              <div class="project-media-fill pm-1"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Bolig</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Bjerke Residence</h3>
+              <div class="project-meta">
+                <span>320 m²</span><span>Oslo</span><span>2026</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="naering">
+            <div class="project-media">
+              <div class="project-media-fill pm-2"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Næring</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Nordlys Kontor</h3>
+              <div class="project-meta">
+                <span>1 200 m²</span><span>Bergen</span><span>2025</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="offentlig">
+            <div class="project-media">
+              <div class="project-media-fill pm-3"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Offentlig</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Kirkebakken bibliotek</h3>
+              <div class="project-meta">
+                <span>2 800 m²</span><span>Trondheim</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="bolig">
+            <div class="project-media">
+              <div class="project-media-fill pm-4"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Bolig</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Skogli rekkehus</h3>
+              <div class="project-meta">
+                <span>14 enheter</span><span>Asker</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="interior">
+            <div class="project-media">
+              <div class="project-media-fill pm-5"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Interiør</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Hotel Kvist</h3>
+              <div class="project-meta">
+                <span>62 rom</span><span>Stavanger</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="offentlig">
+            <div class="project-media">
+              <div class="project-media-fill pm-6"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Offentlig</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Sentralhall · Lillehammer</h3>
+              <div class="project-meta">
+                <span>950 m²</span><span>Lillehammer</span><span>2023</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="naering">
+            <div class="project-media">
+              <div class="project-media-fill pm-1"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Næring</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Aker hovedkontor</h3>
+              <div class="project-meta">
+                <span>4 500 m²</span><span>Oslo</span><span>2023</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="bolig">
+            <div class="project-media">
+              <div class="project-media-fill pm-2"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Bolig</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Villa Holm</h3>
+              <div class="project-meta">
+                <span>410 m²</span><span>Bærum</span><span>2023</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal" data-cat="interior">
+            <div class="project-media">
+              <div class="project-media-fill pm-3"></div>
+              <div class="project-media-pattern"></div>
+            </div>
+            <span class="project-cat">Interiør</span>
+            <span class="project-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <div class="project-content">
+              <h3 class="project-title">Restaurant Salt</h3>
+              <div class="project-meta">
+                <span>340 m²</span><span>Oslo</span><span>2022</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="section cta-banner">
+      <div class="wrap cta-inner reveal">
+        <div>
+          <h2>Planlegger du et <em>prosjekt</em>?</h2>
+          <p>Ta kontakt og fortell oss kort om behovet. Vi svarer innen 48 timer.</p>
+        </div>
+        <a href="kontakt.html" class="btn btn-gold btn-lg btn-arrow">
+          Start prosjekt
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">
+            <span class="brand-mark">A</span>
+            <span class="brand-name">Atelier <em>Nord</em></span>
+          </a>
+          <p class="footer-tagline">Arkitekturstudio i Oslo for bolig, næring og interiør.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="om.html">Om oss</a></li>
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:hei@ateliernord.no">hei@ateliernord.no</a></li>
+            <li><a href="tel:+4722002233">22 00 22 33</a></li>
+            <li>Akersgata 4, Oslo</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Følg</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Are.na</a></li>
+            <li><a href="#">Journal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Atelier Nord AS · Org. 921 845 002</span>
+        <span>Personvern · Cookies</span>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="demo-notes" id="demoNotes" aria-label="Hva pakken inneholder">
+    <button class="demo-notes-toggle" id="demoNotesToggle" aria-expanded="true">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Hva er inkludert</span>
+    </button>
+    <div class="demo-notes-panel">
+      <header>
+        <span class="demo-notes-tier">Pakke 3 · Premium</span>
+        <strong>5 sider · premium studio-nettside</strong>
+      </header>
+      <ul>
+        <li>Hjem, Prosjekter, Tjenester, Studio, Kontakt</li>
+        <li>Aurora-animasjon &amp; parallaks-bakgrunn</li>
+        <li>Animerte statistikk-tellere</li>
+        <li>Animert chart &amp; flytende elementer</li>
+        <li>Prosjektportefølje med filter</li>
+        <li>Testimonial-karusell</li>
+        <li>Scroll-progress &amp; reveal-animasjoner</li>
+        <li>Marquee &amp; cursor-spotlight</li>
+        <li>Premium typografi (serif/sans)</li>
+        <li>Tilgjengelig + reduced-motion-støtte</li>
+      </ul>
+      <div class="demo-notes-pages">
+        <a href="index.html">Hjem</a>
+        <a href="prosjekter.html" class="is-active">Prosjekter</a>
+        <a href="tjenester.html">Tjenester</a>
+        <a href="om.html">Studio</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <p class="demo-notes-foot">Et tydelig steg opp fra pakke 2 — flere sider, sterkere identitet og mer avanserte interaksjoner.</p>
+    </div>
+  </aside>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
