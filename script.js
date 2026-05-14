@@ -107,6 +107,132 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Subtle hero parallax (pointer + scroll) ---------- */
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!prefersReducedMotion) {
+    const hero = document.getElementById("hero");
+    const heroGlow = hero ? hero.querySelector("[data-parallax]") : null;
+    const tiltEl = hero ? hero.querySelector("[data-tilt]") : null;
+
+    if (hero && (heroGlow || tiltEl)) {
+      let rafId = null;
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+
+      const animate = () => {
+        // Smooth lerp toward target
+        currentX += (targetX - currentX) * 0.08;
+        currentY += (targetY - currentY) * 0.08;
+
+        if (heroGlow) {
+          heroGlow.style.transform = `translate3d(calc(-50% + ${currentX * 30}px), ${currentY * 24}px, 0)`;
+        }
+        if (tiltEl) {
+          // Very gentle tilt
+          const rx = (-currentY * 4).toFixed(2);
+          const ry = (currentX * 5).toFixed(2);
+          tiltEl.style.transform = `rotate(-1.2deg) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        }
+
+        if (Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001) {
+          rafId = requestAnimationFrame(animate);
+        } else {
+          rafId = null;
+        }
+      };
+
+      const schedule = () => {
+        if (!rafId) rafId = requestAnimationFrame(animate);
+      };
+
+      hero.addEventListener("pointermove", (e) => {
+        const rect = hero.getBoundingClientRect();
+        // Normalize -1 .. 1
+        targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        schedule();
+      });
+
+      hero.addEventListener("pointerleave", () => {
+        targetX = 0;
+        targetY = 0;
+        schedule();
+      });
+    }
+  }
+
+  /* ---------- Tilt-card interaction on package previews ---------- */
+  if (!prefersReducedMotion) {
+    const tiltCards = document.querySelectorAll(".package-preview");
+    tiltCards.forEach((card) => {
+      let raf = null;
+
+      const apply = (rx, ry) => {
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
+      };
+
+      card.addEventListener("pointermove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        // Cap the tilt very low for a subtle effect
+        const rx = (-y * 4).toFixed(2);
+        const ry = (x * 4).toFixed(2);
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => apply(rx, ry));
+      });
+
+      card.addEventListener("pointerleave", () => {
+        if (raf) cancelAnimationFrame(raf);
+        card.style.transform = "";
+      });
+    });
+  }
+
+  /* ---------- Animated KPI counters (Premium demo) ---------- */
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    const counters = document.querySelectorAll("[data-counter]");
+    if (counters.length) {
+      const animateCounter = (el) => {
+        const end = parseFloat(el.getAttribute("data-counter")) || 0;
+        const suffix = el.getAttribute("data-suffix") || "";
+        const duration = 1400;
+        const start = performance.now();
+        // Ease-out cubic for a tasteful curve
+        const ease = (t) => 1 - Math.pow(1 - t, 3);
+
+        const step = (now) => {
+          const elapsed = now - start;
+          const t = Math.min(1, elapsed / duration);
+          const value = end * ease(t);
+          el.textContent = Math.round(value) + suffix;
+          if (t < 1) requestAnimationFrame(step);
+          else el.textContent = end + suffix;
+        };
+
+        requestAnimationFrame(step);
+      };
+
+      const counterObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      counters.forEach((el) => counterObserver.observe(el));
+    }
+  }
+
   /* ---------- Contact form (Formspree-ready) ---------- */
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");

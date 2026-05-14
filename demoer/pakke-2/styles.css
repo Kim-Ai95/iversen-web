@@ -682,7 +682,7 @@ p { margin: 0; }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 1.8rem 1.6rem;
+  padding: 1.95rem 1.7rem;
   transition: transform var(--t), box-shadow var(--t), border-color var(--t);
   overflow: hidden;
   isolation: isolate;
@@ -731,7 +731,8 @@ p { margin: 0; }
 .svc-card p {
   color: var(--ink-soft);
   font-size: 0.95rem;
-  margin-bottom: 1.2rem;
+  line-height: 1.62;
+  margin-bottom: 1.3rem;
 }
 
 .svc-card ul {
@@ -791,7 +792,7 @@ p { margin: 0; }
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.5rem 1.4rem;
+  padding: 1.6rem 1.5rem;
   position: relative;
   transition: transform var(--t), box-shadow var(--t);
 }
@@ -863,9 +864,10 @@ p { margin: 0; }
 
 .t-quote {
   font-size: clamp(1.1rem, 1vw + 1rem, 1.4rem);
-  font-weight: 500; line-height: 1.5;
+  font-weight: 500; line-height: 1.58;
   margin-bottom: 1.5rem;
   position: relative; z-index: 2;
+  max-width: 34ch;
 }
 
 .t-author {
