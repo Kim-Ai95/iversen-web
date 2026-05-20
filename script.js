@@ -83,24 +83,101 @@
     sections.forEach((s) => observer.observe(s));
   }
 
-  /* ---------- Reveal on scroll ---------- */
+  /* ---------- Reveal on scroll (content is visible without JS/CSS animation) ---------- */
   const revealEls = document.querySelectorAll(".reveal");
+  const IO_ROOT_MARGIN = "80px 0px 140px 0px";
 
-  if ("IntersectionObserver" in window && revealEls.length) {
-    const revealObserver = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  function revealIntersectingSoon(el) {
+    const r = el.getBoundingClientRect();
+    const vh =
+      window.innerHeight || document.documentElement.clientHeight || 0;
+    const vw = window.innerWidth || document.documentElement.clientWidth || 0;
+    const extY = Math.min(vh * 0.65, Math.max(vh + 260, 400));
+    const extX = 120;
+    return (
+      r.bottom >= -extY &&
+      r.top <= vh + extY &&
+      r.right >= -extX &&
+      r.left <= vw + extX
     );
-    revealEls.forEach((el) => revealObserver.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
+
+  function markRevealSeen(el, obs, list) {
+    el.classList.add("is-visible");
+    if (obs) obs.unobserve(el);
+    if (list) {
+      const i = list.indexOf(el);
+      if (i > -1) list.splice(i, 1);
+    }
+  }
+
+  function flushRevealsInView(obs, pending) {
+    for (let i = pending.length - 1; i >= 0; i--) {
+      const el = pending[i];
+      if (revealIntersectingSoon(el)) markRevealSeen(el, obs, pending);
+    }
+  }
+
+  let revealFlushScheduled = false;
+  function scheduleRevealFlush(obs, pending) {
+    if (revealFlushScheduled) return;
+    revealFlushScheduled = true;
+    requestAnimationFrame(() => {
+      revealFlushScheduled = false;
+      flushRevealsInView(obs, pending);
+    });
+  }
+
+  if (revealEls.length) {
+    const pending =
+      "IntersectionObserver" in window ? Array.from(revealEls) : [];
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        flushRevealsInView(null, pending);
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            markRevealSeen(entry.target, obs, pending);
+          });
+        },
+        { threshold: 0, rootMargin: IO_ROOT_MARGIN }
+      );
+
+      flushRevealsInView(revealObserver, pending);
+      pending.slice().forEach((el) => revealObserver.observe(el));
+
+      window.addEventListener(
+        "scroll",
+        () => scheduleRevealFlush(revealObserver, pending),
+        { passive: true }
+      );
+      window.addEventListener(
+        "resize",
+        () => flushRevealsInView(revealObserver, pending),
+        { passive: true }
+      );
+      window.addEventListener(
+        "pageshow",
+        (e) => {
+          flushRevealsInView(revealObserver, pending);
+          if (e.persisted) scheduleRevealFlush(revealObserver, pending);
+        },
+        { passive: true }
+      );
+
+      /** Belt-and-suspenders: edge browsers / race conditions can't leave orphans */
+      window.setTimeout(() => {
+        revealEls.forEach((el) => el.classList.add("is-visible"));
+      }, 8500);
+    } else {
+      revealEls.forEach((el) => el.classList.add("is-visible"));
+    }
   }
 
   /* ---------- Footer year ---------- */

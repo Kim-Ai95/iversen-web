@@ -2397,28 +2397,55 @@ p {
   gap: 0.5rem;
 }
 
-/* ---------- Reveal animations ---------- */
+/* ---------- Reveal: always visible — motion is progressive enhancement ---------- */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 700ms cubic-bezier(.2, .8, .2, 1), transform 700ms cubic-bezier(.2, .8, .2, 1);
-}
-
-.reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
-/* Stagger children inside grids */
-.grid-3 .reveal:nth-child(1),
-.packages-grid .reveal:nth-child(1),
-.why-list .reveal:nth-child(1) { transition-delay: 0ms; }
-.grid-3 .reveal:nth-child(2),
-.packages-grid .reveal:nth-child(2),
-.why-list .reveal:nth-child(2) { transition-delay: 90ms; }
-.grid-3 .reveal:nth-child(3),
-.packages-grid .reveal:nth-child(3),
-.why-list .reveal:nth-child(3) { transition-delay: 180ms; }
+@media (prefers-reduced-motion: no-preference) {
+  /* One-shot subtle entrance once JS marks the element visible */
+  .reveal.is-visible {
+    animation: revealSoft 640ms cubic-bezier(.2, 0.8, 0.2, 1) forwards;
+  }
+}
+
+@keyframes revealSoft {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* Stagger sequential reveals inside grids */
+@media (prefers-reduced-motion: no-preference) {
+  .grid-3 .reveal:nth-child(1),
+  .packages-grid .reveal:nth-child(1),
+  .why-list .reveal:nth-child(1),
+  .why-process-list .reveal:nth-child(1) {
+    animation-delay: 0ms;
+  }
+
+  .grid-3 .reveal:nth-child(2),
+  .packages-grid .reveal:nth-child(2),
+  .why-list .reveal:nth-child(2),
+  .why-process-list .reveal:nth-child(2) {
+    animation-delay: 85ms;
+  }
+
+  .grid-3 .reveal:nth-child(3),
+  .packages-grid .reveal:nth-child(3),
+  .why-list .reveal:nth-child(3),
+  .why-process-list .reveal:nth-child(3) {
+    animation-delay: 170ms;
+  }
+
+  .why-process-list .reveal:nth-child(4) {
+    animation-delay: 235ms;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -4041,7 +4068,7 @@ p {
 }
 
 .demo-logo--klar {
-  background: linear-gradient(135deg, #0d9488 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #4f6960 0%, #5f7a71 100%);
   color: #ffffff;
   font-weight: 800;
   box-shadow: 0 4px 12px -4px rgba(13, 148, 136, 0.4);
@@ -4090,7 +4117,7 @@ p {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0d9488;
+  background: #4f6960;
   box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.5);
   animation: pulseDot 2.4s ease-in-out infinite;
 }
@@ -4107,14 +4134,14 @@ p {
 
 .demo-h--klar em {
   font-style: normal;
-  background: linear-gradient(135deg, #0d9488 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #4f6960 0%, #5f7a71 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .demo-btn--klar {
-  background: linear-gradient(135deg, #0d9488 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #4f6960 0%, #5f7a71 100%);
   color: #ffffff;
   font-weight: 600;
   box-shadow: 0 4px 10px -2px rgba(13, 148, 136, 0.4);
@@ -4139,7 +4166,7 @@ p {
   background:
     radial-gradient(70% 60% at 25% 25%, rgba(167, 243, 208, 0.45), transparent 60%),
     radial-gradient(50% 50% at 80% 80%, rgba(20, 184, 166, 0.35), transparent 60%),
-    linear-gradient(160deg, #0d9488 0%, #134e4a 100%);
+    linear-gradient(160deg, #4f6960 0%, #556f67 100%);
   box-shadow: 0 6px 16px -6px rgba(13, 148, 136, 0.4);
 }
 
@@ -4229,7 +4256,7 @@ p {
   width: 18px;
   height: 18px;
   background: #ecfdf5;
-  color: #0d9488;
+  color: #4f6960;
   border-radius: 4px;
   margin-bottom: 2px;
 }
@@ -4274,7 +4301,7 @@ p {
 }
 
 .demo-stats-row--klar b span {
-  background: linear-gradient(135deg, #0d9488 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #4f6960 0%, #5f7a71 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -4807,7 +4834,7 @@ p {
 }
 
 .package--tier-2 .package-tier .tier-bullet {
-  background: linear-gradient(135deg, #0d9488 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #4f6960 0%, #5f7a71 100%);
   box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.18);
 }
 
@@ -5281,12 +5308,6 @@ p {
   line-height: 1.55;
   color: #94a3b8;
 }
-
-/* Stagger reveal on steps */
-.why-process-list .reveal:nth-child(1) { transition-delay: 0ms; }
-.why-process-list .reveal:nth-child(2) { transition-delay: 80ms; }
-.why-process-list .reveal:nth-child(3) { transition-delay: 160ms; }
-.why-process-list .reveal:nth-child(4) { transition-delay: 240ms; }
 
 /* Soften why section vertical padding now that it has more body */
 .why {

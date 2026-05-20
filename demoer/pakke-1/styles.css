@@ -817,6 +817,7 @@ p { margin: 0; }
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
+  isolation: isolate;
   transition: transform var(--t), box-shadow var(--t);
 }
 
@@ -825,31 +826,117 @@ p { margin: 0; }
   box-shadow: var(--shadow-lg);
 }
 
+.galleri-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.52;
+  background-image: radial-gradient(
+    ellipse 110% 62% at 50% -2%,
+    rgba(255, 248, 235, 0.48),
+    transparent 62%
+  );
+}
+
 .galleri-item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(42, 29, 16, 0.45) 100%);
+  z-index: 2;
+  background: linear-gradient(
+    173deg,
+    rgba(253, 248, 240, 0.09) 0%,
+    transparent 40%,
+    rgba(42, 29, 16, 0.34) 100%
+  );
   transition: opacity var(--t);
 }
 
-.gi-1 { background: linear-gradient(135deg, #d6a886 0%, #6e3d27 100%); }
-.gi-2 { background: linear-gradient(135deg, #f0d6b8 0%, #c89177 100%); }
-.gi-3 { background: linear-gradient(135deg, #e8c9a8 0%, #8a4f33 100%); }
-.gi-4 { background: linear-gradient(135deg, #c0825e 0%, #4f2a1a 100%); }
-.gi-5 { background: linear-gradient(135deg, #f7e6d0 0%, #b86d4d 100%); }
-.gi-6 { background: linear-gradient(135deg, #d4a78a 0%, #784a32 100%); }
+/*
+  Galleri = hår-/farge-logikk (illus. toner & reflekser • kun CSS)
+------------------------------------------------------------------ */
+.gi-1 {
+  /* Sjokoladebrun, varm dybde */
+  background:
+    repeating-linear-gradient(
+      94deg,
+      rgba(40, 28, 24, 0.14) 0 1px,
+      transparent 1px 5px
+    ),
+    linear-gradient(176deg, #271a16 8%, #4e342c 52%, #3b261f 94%);
+}
+
+.gi-2 {
+  /* Typisk «røtt-mørk tupp → lys lengde» (balayage-følelse) */
+  background:
+    radial-gradient(ellipse 78% 100% at 50% 118%, rgba(232, 200, 175, 0.88), transparent 70%),
+    linear-gradient(
+      170deg,
+      #2f221f 0%,
+      #5a3f36 42%,
+      #b0846c 74%,
+      #e9d8c9 98%
+    );
+}
+
+.gi-3 {
+  /* Lys varm blond med brede highlight-bånd */
+  background:
+    linear-gradient(104deg, rgba(255, 245, 220, 0.5) 12%, transparent 38%),
+    linear-gradient(
+      162deg,
+      #9f7a53 24%,
+      #d9b892 62%,
+      #f7ecd6 94%
+    );
+}
+
+.gi-4 {
+  /* Kobbertone med «metall-glød» ned mot spiss */
+  background:
+    radial-gradient(ellipse 72% 90% at 32% 78%, rgba(255, 210, 190, 0.42), transparent 72%),
+    linear-gradient(152deg, #3f2620 14%, #7a3f32 54%, #c96b52 90%);
+}
+
+.gi-5 {
+  /* Svært mørk naturtone / jordfarget base */
+  background:
+    repeating-linear-gradient(
+      92deg,
+      transparent 0 4px,
+      rgba(255, 255, 255, 0.02) 4px 5px
+    ),
+    linear-gradient(186deg, #15100e 0%, #34241e 56%, #4a362e 94%);
+}
+
+.gi-6 {
+  /* Lys refleks / strand i dypere undertone */
+  background:
+    linear-gradient(
+      115deg,
+      transparent 34%,
+      rgba(252, 244, 230, 0.62) 46%,
+      rgba(252, 244, 230, 0.2) 58%,
+      transparent 72%
+    ),
+    linear-gradient(164deg, #46342c 14%, #6b5246 54%, #8d7566 94%);
+}
 
 .gi-tag {
   position: absolute;
-  bottom: 14px;
-  left: 14px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #fdfaf6;
-  z-index: 2;
+  bottom: 12px;
+  left: 12px;
+  font-size: 0.71rem;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  text-transform: none;
+  background: rgba(42, 29, 16, 0.42);
+  color: rgba(253, 250, 246, 0.97);
+  padding: 5px 9px;
+  border-radius: 6px;
+  z-index: 3;
 }
 
 /* =========================================================
@@ -1153,36 +1240,102 @@ p { margin: 0; }
   line-height: 1.5;
 }
 
-@media (max-width: 600px) {
-  .demo-notes { bottom: 12px; right: 12px; }
-  .demo-notes-toggle span { display: none; }
-  .demo-notes-toggle { padding: 11px; }
+/* Desktop: litt mindre sekundær panel — ikke dominerende */
+@media (min-width: 768px) {
+  .demo-notes-toggle {
+    padding: 8px 12px;
+    gap: 6px;
+    font-size: 0.785rem;
+    box-shadow: 0 11px 24px -8px rgba(0, 0, 0, 0.3);
+  }
+
+  .demo-notes-toggle svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .demo-notes-panel {
+    width: min(276px, calc(100vw - 40px));
+    border-radius: 14px;
+    padding: 1rem 1.05rem 1.06rem;
+  }
+
+  .demo-notes-panel header {
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.65rem;
+    gap: 1px;
+  }
+
+  .demo-notes-tier {
+    font-size: 0.605rem;
+  }
+
+  .demo-notes-panel header strong {
+    font-size: 1.1rem;
+  }
+
+  .demo-notes-panel ul {
+    gap: 0.38rem;
+  }
+
+  .demo-notes-panel li {
+    font-size: 0.8rem;
+    gap: 7px;
+  }
+
+  .demo-notes-panel li::before {
+    width: 12px;
+    height: 12px;
+    background-size: 9px auto;
+  }
+
+  .demo-notes-foot {
+    margin-top: 0.82rem;
+    padding-top: 0.72rem;
+    font-size: 0.785rem;
+  }
+}
+
+/* Pakke-demo: ikke blokkér innhold på små skjermer */
+@media (max-width: 767px) {
+  .demo-notes {
+    display: none !important;
+  }
 }
 
 /* =========================================================
-   Reveal animations
+   Reveal: always visible; motion enhances when flagged .is-visible
    ========================================================= */
 .reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 700ms cubic-bezier(.2,.8,.2,1), transform 700ms cubic-bezier(.2,.8,.2,1);
-}
-
-.reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
-.priser-grid .reveal:nth-child(1) { transition-delay: 0ms; }
-.priser-grid .reveal:nth-child(2) { transition-delay: 100ms; }
-.priser-grid .reveal:nth-child(3) { transition-delay: 200ms; }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal.is-visible {
+    animation: revealSoft 640ms cubic-bezier(.2,.8,.2,1) forwards;
+  }
 
-.galleri-grid .reveal:nth-child(1) { transition-delay: 0ms; }
-.galleri-grid .reveal:nth-child(2) { transition-delay: 60ms; }
-.galleri-grid .reveal:nth-child(3) { transition-delay: 120ms; }
-.galleri-grid .reveal:nth-child(4) { transition-delay: 180ms; }
-.galleri-grid .reveal:nth-child(5) { transition-delay: 240ms; }
-.galleri-grid .reveal:nth-child(6) { transition-delay: 300ms; }
+  .priser-grid .reveal:nth-child(1) { animation-delay: 0ms; }
+  .priser-grid .reveal:nth-child(2) { animation-delay: 90ms; }
+  .priser-grid .reveal:nth-child(3) { animation-delay: 185ms; }
+
+  .galleri-grid .reveal:nth-child(1) { animation-delay: 0ms; }
+  .galleri-grid .reveal:nth-child(2) { animation-delay: 65ms; }
+  .galleri-grid .reveal:nth-child(3) { animation-delay: 130ms; }
+  .galleri-grid .reveal:nth-child(4) { animation-delay: 190ms; }
+  .galleri-grid .reveal:nth-child(5) { animation-delay: 255ms; }
+  .galleri-grid .reveal:nth-child(6) { animation-delay: 320ms; }
+}
+
+@keyframes revealSoft {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: none;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
